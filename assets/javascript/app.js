@@ -58,16 +58,34 @@ var playerScore;
 
 var startTrivia = false;
 var timerRunning = false;
-var intervalID;
-var time = 0
+
+// Timeer
+
+// var time = new Date("date").getTime();
+// var t = setInterval(() => {
+//     var now = new Date().getTime();
+//     var distance = countDownDate - now;
+//     var minutes = Math.floor((distance & (1000 * 60)) / 1000);
+
+//     documengetElementById("timer").innerHTML = days + "d " + hours + "h " + minutes "m " + secondes + "s ";
+    
+// }, interval);
+
+// if (distance < 0) {
+//     clearInterval(x);
+//     document.getElementById("timer").innerHTML = "times up!";
+// }
+// },1000);
+
+// }
 
 //sets reset buttton
 
-function reset() {
-    time = 0
-    questionNumber = 0
-    $("#timer").text("00:00")
-}
+// function reset() {
+//     time = 0
+//     questionNumber = 0
+//     $("#timer").text("00:00")=
+// }
 
 
 //Loads welcome
@@ -76,25 +94,27 @@ var question = document.createElement
 $(document).ready(function() {
     $("#start").html("Welcome to the trivia game where you will have the oppourtunity to test your knowledge on the worlds most mysterious beasts!");
    
-    var s = $("<button>");
+    var s = $("<div>" + "<button>" + "</div>");
     s.addClass("startButton");
     s.text("Start!");
     $("#start").append(s);
+    $(".wrapper").hide();
     $(".question").hide();
     $(".answerChoices").hide()
     // var progress = ("<div>" +"Question: " + playerScore + "</div>");
 })
 
     $("#start").click(function startGame(){
-        $("#start").empty();
+        $("#start").hide();
         $(".question").show();
         $(".answerChoices").show()
-
+        $(".wrapper").show();
         startGame = true
      
         
         var i = questionNumber 
-            var q = $("<div>")
+
+        var q = $("<div>")
             q.addClass("question");
             q.text(triviaQuestion[i].question);
             $(".question").append(q);
@@ -103,34 +123,34 @@ $(document).ready(function() {
 
         // var r = answerChoices
             var r = $("<button>");
-            r.addClass("playerResponse");
-            r.attr("id", triviaQuestion[i].answers[z])
+            r.addClass("button");
+            r.attr("button-id", i)
             r.text(triviaQuestion[i].answers[z]);
             $(".answerChoices").append(r);
         }
     })
     
 
-
    
-        $(".playerResponse").click(function correctAnswer() {
+        $(".button-id").click(function correctAnswer() {
             console.log("ive been clicked");
             playerChoice = this.id;
             console.log(playerChoice)
 
             if(playerChoice === triviaQuestion[i].correctAnswer) {
-                correctChoice++;
+                correct++;
                 questionNumber++;
                 $(".counter").text("Question  " + questionNumber + "  of 7");
             }
+
             else{
                 incorrect++;
                 questionNumber++;
                 $(".counter").text("Question  " + questionNumber + "  of 7");
 
             }
-
             correctAnswer();
+
         })
 
     

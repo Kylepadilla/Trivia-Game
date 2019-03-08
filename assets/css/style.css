@@ -4,17 +4,21 @@ body{
 
 p{
    text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 46px;
+   font-family: 'Indie Flower', cursive;
+   font-size: 60px;
    font-weight: bold;
+   margin: 45px 0px 0px 0px
+
 }
 
 #start{
     font-family: "sans-serif";
     font-size: 24px;
-    text-align: center;
-    padding: 2px 0px;
+    padding: 50px 0px 12px;
     border-radius: 50px;
+    margin: 75px 200px 0px 200px;
+    background: white;
+    text-align: center;
 }
 
 #welcome{
@@ -29,13 +33,11 @@ p{
 }
 .scoreboard{
     font-family: "sans-serif";
-    background-color: #1e5c96;
-    font-size: 16px;
+    font-size: 24px;
     text-align: left;
-    color: black;
-    padding: 5px 500px 5px 25px;
-    width: 200px;
-    border-radius: 50px;
+    color: white;
+    padding: 5px 50px 5px 25px;
+    margin-left: 200px
     
 
 }
@@ -73,12 +75,54 @@ p{
     width: auto;
 }
 
-
-.button{
+#gif{
+    text-align: center;
 
 }
+.startButton{
+    font-family: "sans-serif";
+    background-color: burlywood;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    width: 200px;
+    padding: 10px 0px 10px;
+    border-radius: 50px;
+    margin: 0% 0% 0% 43%;
+    
+}
 
+.startButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 
+.wrapper{
+    font-family: "sans-serif";
+    font-size: 24px;
+    padding: 50px 0px 12px;
+    border-radius: 50px;
+    margin: 75px 200px 0px 200px;
+    background: white;
+    text-align: center;
+}
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 32px 16px;
+  }
+  
+  .button:hover {
+    background-color:rgb(122, 122, 129); 
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
 
 
 
